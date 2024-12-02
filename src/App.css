@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* Base styling for the .deep class */
+.deep {
+  padding: 40px; /* Default padding for desktop */
+}
+
+/* Responsive styling to remove padding on mobile devices */
+@media (max-width: 768px) {
+  .deep {
+      padding: 0px; /* Remove padding for mobile */
+      margin: 0px;
+  }
+}
+
+
+body {
+  /* background-image: url('D:\react-assignment\frontend\src\Resources\ZzYKkK8jQArT04Mi_Hero_WEB-1.jpeg'); Replace with your image path */
+  background-size: cover; /* Cover the entire area */
+  /* border: 2px solid red; */
+  /* padding: 20px; */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  min-height: 100vh; /* Ensure it covers the whole viewport */
+  margin: 0; /* Remove default margin */
+
+}
+
+.header-bg {
+  background-color:transparent; /* Adjust alpha for transparency */
+  position: relative; /* To position it correctly */
+    z-index: 10; /* Ensure it sits on top of other elements */
+    box-shadow: none; /* Remove shadow effect */
+
+  /* backdrop-filter: blur(10px); Optional: Add a blur effect */
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
