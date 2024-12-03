@@ -36,50 +36,50 @@ const stays = [
 const Stars = () => {
     const rowRef = useRef(null);
 
-    const scrollRight = () => {
-        rowRef.current.scrollBy({
-            left: 300,
-            behavior: 'smooth',
-        });
-    };
-
-    const scrollLeft = () => {
-        rowRef.current.scrollBy({
-            left: -300,
-            behavior: 'smooth',
-        });
-    };
-
     return (
-        <div className="p-6">
-            <h2 className="text-3xl font-bold text-center mb-4">STAY LIKE THE STARS</h2>
-            <div className="relative">
-              
+        <>
+            <div className="p-6">
+                <h2 className="text-3xl font-bold text-center mb-4">STAY LIKE THE STARS</h2>
+                <div className="relative">
 
-                <div
-                    ref={rowRef}
-                    className="flex space-x-4 overflow-x-auto scrollbar-hide"
-                >
-                    {stays.map((stay, index) => (
-                        <div
-                            key={index}
-                            className="relative bg-white rounded-lg shadow-md p-4 min-w-[250px] flex flex-col items-center"
-                        >
-                            <img
-                                src={stay.img}
-                                alt={stay.name}
-                                className="h-40 w-full object-cover rounded"
-                            />
-                            <h3 className="mt-2 font-semibold">{stay.name}</h3>
-                            <p className="text-gray-600">Stayed at: {stay.stayedAt}</p>
-                            <button className="mt-3 bg-black text-white px-4 py-2 rounded focus:outline-none">
-                                View
-                            </button>
-                        </div>
-                    ))}
+
+                    <div
+                        ref={rowRef}
+                        className="flex space-x-4 overflow-x-auto scrollbar-hide"
+                    >
+                        {stays.map((stay, index) => (
+                            <div
+                                key={index}
+                                className="relative bg-white rounded-lg shadow-md p-4 min-w-[250px] flex flex-col items-center"
+                            >
+                                <img
+                                    src={stay.img}
+                                    alt={stay.name}
+                                    className="h-40 w-full object-cover rounded"
+                                />
+                                <h3 className="mt-2 font-semibold">{stay.name}</h3>
+                                <p className="text-gray-600">Stayed at: {stay.stayedAt}</p>
+                                <button className="mt-3 bg-black text-white px-4 py-2 rounded focus:outline-none">
+                                    View
+                                </button>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className="tarun w-full  text-black font-bold overflow-hidden">
+                <div className="whitespace-nowrap animate-marquee py-2">
+                    <span className="mx-8">3L+ Happy Guests</span>
+                    <span className="mx-8">Awarded Favorite Villa Rental</span>
+                    <span className="mx-8">1000+ Handpicked Villas</span>
+                    <span className="mx-8">Experience Luxurious Stays!</span>
+                    <span className="mx-8">Plan Your Perfect Getaway!</span>
+                    <span className="mx-8">Discover Unforgettable Memories!</span>
+                </div>
+            </div>
+
+
+        </>
     );
 };
 

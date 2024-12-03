@@ -82,3 +82,23 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+@keyframes marquee{
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translate(-20%);
+  }
+}
+.animate-marquee{
+  display: inline-flex;
+  animation: marquee 10s linear infinite;
+  text-decoration:underline;
+}
+.tarun{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+ margin: 10px 0px;
+}
+.marquee-container {
+  margin: 10px 0; /* Add margin at the top and bottom */
+}
